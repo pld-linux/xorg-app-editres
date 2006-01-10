@@ -1,17 +1,18 @@
 Summary:	editres application
 Summary(pl):	Aplikacja editres
 Name:		xorg-app-editres
-Version:	0.99.2
+Version:	1.0.1
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/app/editres-%{version}.tar.bz2
-# Source0-md5:	2e404b57bf5be03ab3104a350aa30210
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/app/editres-%{version}.tar.bz2
+# Source0-md5:	a9bbacc163767f79dfc08a8ebe05490b
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXaw-devel
+BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_bindir}/*
-%{_libdir}/X11/app-defaults/*
+%{_datadir}/X11/app-defaults/*
 %{_mandir}/man1/*.1x*
