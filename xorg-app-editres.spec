@@ -1,5 +1,5 @@
 Summary:	editres application - dynamic resource editor for X Toolkit applications
-Summary(pl.UTF-8):   Aplikacja editres - edytor dynamicznych zasobów dla aplikacji Xt
+Summary(pl.UTF-8):	Aplikacja editres - edytor dynamicznych zasobów dla aplikacji Xt
 Name:		xorg-app-editres
 Version:	1.0.3
 Release:	1
