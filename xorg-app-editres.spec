@@ -1,5 +1,5 @@
 Summary:	editres application - dynamic resource editor for X Toolkit applications
-Summary(pl):	Aplikacja editres - edytor dynamicznych zasobów dla aplikacji Xt
+Summary(pl.UTF-8):   Aplikacja editres - edytor dynamicznych zasobÃ³w dla aplikacji Xt
 Name:		xorg-app-editres
 Version:	1.0.3
 Release:	1
@@ -26,14 +26,14 @@ application and view the results dynamically. Once the user is happy
 with a resource specification editres will append the resource string
 to the user's X Resources file.
 
-%description -l pl
-editres to narzêdzie pozwalaj±ce u¿ytkownikom i programistom aplikacji
-ogl±daæ pe³n± hierarchiê widgetów dowolnej aplikacji Xt (X Toolkitu)
-porozumiewaj±cej siê protoko³em Editres. Ponadto editres pomaga
-u¿ytkownikom tworzyæ opisy zasobów, pozwala nak³adaæ zasoby na
-aplikacje i dynamicznie ogl±daæ wyniki. Kiedy u¿ytkownik jest
-zadowolony z zasobów, editres do³±cza ³añcuch zasobów do pliku X
-Resources u¿ytkownika.
+%description -l pl.UTF-8
+editres to narzÄ™dzie pozwalajÄ…ce uÅ¼ytkownikom i programistom aplikacji
+oglÄ…daÄ‡ peÅ‚nÄ… hierarchiÄ™ widgetÃ³w dowolnej aplikacji Xt (X Toolkitu)
+porozumiewajÄ…cej siÄ™ protokoÅ‚em Editres. Ponadto editres pomaga
+uÅ¼ytkownikom tworzyÄ‡ opisy zasobÃ³w, pozwala nakÅ‚adaÄ‡ zasoby na
+aplikacje i dynamicznie oglÄ…daÄ‡ wyniki. Kiedy uÅ¼ytkownik jest
+zadowolony z zasobÃ³w, editres doÅ‚Ä…cza Å‚aÅ„cuch zasobÃ³w do pliku X
+Resources uÅ¼ytkownika.
 
 %prep
 %setup -q -n editres-%{version}
