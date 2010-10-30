@@ -1,20 +1,20 @@
 Summary:	editres application - dynamic resource editor for X Toolkit applications
 Summary(pl.UTF-8):	Aplikacja editres - edytor dynamicznych zasobów dla aplikacji Xt
 Name:		xorg-app-editres
-Version:	1.0.4
+Version:	1.0.5
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/editres-%{version}.tar.bz2
-# Source0-md5:	1800dda934ebb7c588ea686278a10e9f
+# Source0-md5:	87e499fd2599910af7961187205ca7ed
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-util-util-macros >= 1.8
 Requires:	xorg-lib-libXt >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -59,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc AUTHORS COPYING ChangeLog README
 %attr(755,root,root) %{_bindir}/editres
 %{_datadir}/X11/app-defaults/Editres*
 %{_mandir}/man1/editres.1x*
