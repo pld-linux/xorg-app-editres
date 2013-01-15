@@ -7,6 +7,7 @@ License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/editres-%{version}.tar.bz2
 # Source0-md5:	623322610e4040393e0ff2a69e6612cd
+Patch0:		%{name}-format.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -38,6 +39,7 @@ Resources użytkownika.
 
 %prep
 %setup -q -n editres-%{version}
+%patch0 -p1
 
 %build
 %{__aclocal}
