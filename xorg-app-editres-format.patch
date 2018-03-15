@@ -1,42 +1,42 @@
---- editres-1.0.6/geometry.c.orig	2013-01-13 01:05:30.000000000 +0100
-+++ editres-1.0.6/geometry.c	2013-01-15 19:21:30.973960183 +0100
-@@ -63,7 +63,7 @@ _FindWidget(Widget w)
+--- editres-1.0.7/geometry.c.orig	2018-03-15 20:38:33.578823819 +0100
++++ editres-1.0.7/geometry.c	2018-03-15 20:45:03.065486046 +0100
+@@ -63,7 +63,7 @@
      Window win;
      int x, y;			/* location of event in root coordinates. */
  
--    sprintf(msg, res_labels[14]);
-+    snprintf(msg, BUFSIZ, "%s", res_labels[14]);
+-    snprintf(msg, sizeof(msg), res_labels[14]);
++    snprintf(msg, sizeof(msg), "%s", res_labels[14]);
  
      SetMessage(global_screen_data.info_label, msg);
  
-@@ -103,7 +103,7 @@ DisplayChild(Event *event)
+@@ -103,7 +103,7 @@
  		    find_event->widgets.num_widgets);
  
      if (node == NULL) {
--	sprintf(msg, res_labels[13]);
-+	snprintf(msg, BUFSIZ, "%s", res_labels[13]);
- 	SetMessage(global_screen_data.info_label, msg);
- 	return;	
-     }
---- editres-1.0.6/svpopup.c.orig	2013-01-13 01:05:30.000000000 +0100
-+++ editres-1.0.6/svpopup.c	2013-01-15 19:24:45.332921442 +0100
-@@ -127,7 +127,7 @@ ModifySVEntry(Widget w, XEvent *event, S
- 	old = global_screen_data.res_text;
- 	break;
-     default:
--	sprintf(msg, res_labels[22]);
-+	snprintf(msg, BUFSIZ, "%s", res_labels[22]);
+-	snprintf(msg, sizeof(msg), res_labels[13]);
++	snprintf(msg, sizeof(msg), "%s", res_labels[13]);
  	SetMessage(global_screen_data.info_label, msg);
  	return;
      }
---- editres-1.0.6/utils.c.orig	2013-01-13 01:05:30.000000000 +0100
-+++ editres-1.0.6/utils.c	2013-01-15 19:25:25.208093290 +0100
-@@ -518,7 +518,7 @@ HandleGetResources(Event *event)
+--- editres-1.0.7/svpopup.c.orig	2018-03-15 20:38:33.578823819 +0100
++++ editres-1.0.7/svpopup.c	2018-03-15 20:45:25.268819111 +0100
+@@ -127,7 +127,7 @@
+ 	old = global_screen_data.res_text;
+ 	break;
+     default:
+-	snprintf(msg, sizeof(msg), res_labels[22]);
++	snprintf(msg, sizeof(msg), "%s", res_labels[22]);
+ 	SetMessage(global_screen_data.info_label, msg);
+ 	return;
+     }
+--- editres-1.0.7/utils.c.orig	2018-03-15 20:38:33.578823819 +0100
++++ editres-1.0.7/utils.c	2018-03-15 20:45:53.745485464 +0100
+@@ -518,7 +518,7 @@
  			get_event->info[i].widgets.num_widgets);
  
  	if (node == NULL) {
--	    sprintf(buf, res_labels[16]);
-+	    snprintf(buf, BUFSIZ, "%s", res_labels[16]);
- 	    AddString(&errors, buf); 
- 	    continue;	
+-	    snprintf(buf, sizeof(buf), res_labels[16]);
++	    snprintf(buf, sizeof(buf), "%s", res_labels[16]);
+ 	    AddString(&errors, buf);
+ 	    continue;
  	}
