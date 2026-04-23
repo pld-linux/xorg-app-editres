@@ -1,0 +1,11 @@
+--- editres-1.1.0/utils.c.orig	2026-04-23 20:39:44.269913797 +0200
++++ editres-1.1.0/utils.c	2026-04-23 20:39:56.403181398 +0200
+@@ -157,7 +157,7 @@ AddString(char ** str, const char *add)
+  */
+ 
+ WNode *
+-FindNode(WNode *top_node, unsigned long *ids, Cardinal number)
++FindNode(WNode *top_node, CARD64 *ids, Cardinal number)
+ {
+     Cardinal i, j;
+     WNode *node;
